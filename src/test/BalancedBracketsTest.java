@@ -37,11 +37,13 @@ public class BalancedBracketsTest {
     public void balancedBracketsIsNotNull() {
         assertNotNull(BalancedBrackets.hasBalancedBrackets("LaunchCode"));
     }
-
     @Test //7
     public void balancedBracketsDetectsThreeBrackets() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("[LaunchCode]]"));
     }
-
+    @Test //8
+    public void stringWithNonAlphaCharactersReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("Launch[Code] Rocks! ?"));
+    }
 
 }
